@@ -1,0 +1,179 @@
+/* Map3DView.css - Enhanced styles */
+
+/* Container styling */
+.map3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Survivor label styling */
+.survivor-label {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    text-align: center;
+}
+
+/* Loading screen */
+.loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(10, 25, 41, 0.95) 0%, rgba(5, 15, 25, 0.95) 100%);
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+.loading-screen h3 {
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.loading-screen p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+    text-align: center;
+    max-width: 80%;
+    font-size: 0.95rem;
+}
+
+/* Control panel for view options */
+.view-controls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 5;
+}
+
+.view-controls button {
+    background-color: rgba(10, 25, 41, 0.8);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-controls button:hover {
+    background-color: rgba(30, 45, 65, 0.9);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.view-controls button.active {
+    background-color: #3f8cff;
+    border-color: #5c9bff;
+}
+
+/* Coordinates display */
+.coordinates-display {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: rgba(10, 25, 41, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Compass indicator */
+.compass {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(10, 25, 41, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+.compass-needle {
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background-color: #ff5252;
+    transform-origin: bottom center;
+}
+
+.compass-needle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #ff5252;
+    transform: rotate(180deg);
+}
+
+.compass-marker {
+    position: absolute;
+    font-size: 9px;
+    color: white;
+    font-weight: bold;
+}
+
+.north { top: 5px; left: 50%; transform: translateX(-50%); }
+.east { right: 5px; top: 50%; transform: translateY(-50%); }
+.south { bottom: 5px; left: 50%; transform: translateX(-50%); }
+.west { left: 5px; top: 50%; transform: translateY(-50%); }
+
+/* Stats display */
+.scene-stats {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(10, 25, 41, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 10px;
+    z-index: 5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+/* Override canvas container styles */
+canvas {
+    outline: none;
+    touch-action: none;
+} 

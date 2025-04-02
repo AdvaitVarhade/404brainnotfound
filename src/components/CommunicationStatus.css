@@ -1,0 +1,121 @@
+.communication-status {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.status-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    background: rgba(40, 40, 40, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    transition: all 0.25s ease;
+    flex: 1;
+    min-width: 180px;
+    max-width: 250px;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.status-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background: rgba(45, 45, 45, 0.7);
+}
+
+.status-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, currentColor, transparent);
+    opacity: 0.5;
+}
+
+.status-badge.connected {
+    border-top: 2px solid rgba(76, 175, 80, 0.5);
+    color: #4caf50;
+}
+
+.status-badge.disconnected {
+    border-top: 2px solid rgba(244, 67, 54, 0.5);
+    color: #f44336;
+}
+
+.status-badge.weak {
+    border-top: 2px solid rgba(255, 152, 0, 0.5);
+    color: #ff9800;
+}
+
+.status-badge.limited {
+    border-top: 2px solid rgba(255, 193, 7, 0.5);
+    color: #ffc107;
+}
+
+.status-icon {
+    font-size: 1.5rem;
+}
+
+.status-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.status-name {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.status-description {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.signal-strength {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.signal-bars {
+    display: flex;
+    align-items: flex-end;
+    height: 15px;
+    gap: 2px;
+}
+
+.signal-bar {
+    width: 4px;
+    border-radius: 1px;
+    background-color: currentColor;
+    opacity: 0.3;
+}
+
+.signal-bar.active {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .status-badge {
+        min-width: 150px;
+        padding: 0.85rem 1rem;
+    }
+}

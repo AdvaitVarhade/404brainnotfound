@@ -1,0 +1,149 @@
+.rover-status {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.15rem;
+}
+
+.battery-status {
+    grid-column: span 2;
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 8px;
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.battery-status:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.battery-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.battery-percentage {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.battery-percentage .percent {
+    font-size: 1.25rem;
+    opacity: 0.7;
+    margin-left: 0.25rem;
+    font-weight: 400;
+}
+
+.battery-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.battery-status.high {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(76, 175, 80, 0.05));
+    border-top: 2px solid rgba(76, 175, 80, 0.5);
+    color: #4caf50;
+}
+
+.battery-status.medium {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
+    border-top: 2px solid rgba(255, 193, 7, 0.5);
+    color: #ffc107;
+}
+
+.battery-status.low {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.15), rgba(244, 67, 54, 0.05));
+    border-top: 2px solid rgba(244, 67, 54, 0.5);
+    color: #f44336;
+}
+
+.battery-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    transition: width 1s ease-in-out;
+}
+
+.battery-bar.high {
+    background-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.battery-bar.medium {
+    background-color: #ffc107;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.battery-bar.low {
+    background-color: #f44336;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+.status-card {
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 8px;
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    height: 100%;
+    min-height: 120px;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.status-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.status-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.status-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+    .status-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .battery-status {
+        grid-column: span 1;
+    }
+}

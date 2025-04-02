@@ -1,0 +1,154 @@
+{
+  "survivors": [
+    {
+      "id": "SRV-001",
+      "name": "Alpha Team",
+      "status": "critical",
+      "position": {
+        "x": 5,
+        "y": 5
+      },
+      "vitalSigns": {
+        "heartRate": 45,
+        "bodyTemperature": 35.2,
+        "respirationRate": 8
+      },
+      "timeRemaining": 15
+    },
+    {
+      "id": "SRV-002",
+      "name": "Bravo Team",
+      "status": "stable",
+      "position": {
+        "x": 7,
+        "y": 3
+      },
+      "vitalSigns": {
+        "heartRate": 72,
+        "bodyTemperature": 37.1,
+        "respirationRate": 14
+      },
+      "timeRemaining": 45
+    },
+    {
+      "id": "SRV-003",
+      "name": "Charlie Team",
+      "status": "injured",
+      "position": {
+        "x": 8,
+        "y": 8
+      },
+      "vitalSigns": {
+        "heartRate": 85,
+        "bodyTemperature": 38.5,
+        "respirationRate": 18
+      },
+      "timeRemaining": 30
+    },
+    {
+      "id": "SRV-004",
+      "name": "Delta Team",
+      "status": "critical",
+      "position": {
+        "x": 3,
+        "y": 7
+      },
+      "vitalSigns": {
+        "heartRate": 40,
+        "bodyTemperature": 34.8,
+        "respirationRate": 6
+      },
+      "timeRemaining": 10
+    },
+    {
+      "id": "SRV-005",
+      "name": "Echo Team",
+      "status": "stable",
+      "position": {
+        "x": 12,
+        "y": 4
+      },
+      "vitalSigns": {
+        "heartRate": 68,
+        "bodyTemperature": 36.8,
+        "respirationRate": 12
+      },
+      "timeRemaining": 60
+    },
+    {
+      "id": "SRV-006",
+      "name": "Foxtrot Team",
+      "status": "injured",
+      "position": {
+        "x": 15,
+        "y": 7
+      },
+      "vitalSigns": {
+        "heartRate": 92,
+        "bodyTemperature": 38.2,
+        "respirationRate": 20
+      },
+      "timeRemaining": 25
+    },
+    {
+      "id": "SRV-007",
+      "name": "Golf Team",
+      "status": "critical",
+      "position": {
+        "x": 2,
+        "y": 12
+      },
+      "vitalSigns": {
+        "heartRate": 38,
+        "bodyTemperature": 34.5,
+        "respirationRate": 5
+      },
+      "timeRemaining": 8
+    },
+    {
+      "id": "SRV-008",
+      "name": "Hotel Team",
+      "status": "stable",
+      "position": {
+        "x": 18,
+        "y": 15
+      },
+      "vitalSigns": {
+        "heartRate": 70,
+        "bodyTemperature": 37.0,
+        "respirationRate": 13
+      },
+      "timeRemaining": 55
+    },
+    {
+      "id": "SRV-009",
+      "name": "India Team",
+      "status": "injured",
+      "position": {
+        "x": 10,
+        "y": 18
+      },
+      "vitalSigns": {
+        "heartRate": 88,
+        "bodyTemperature": 38.8,
+        "respirationRate": 22
+      },
+      "timeRemaining": 20
+    },
+    {
+      "id": "SRV-010",
+      "name": "Juliet Team",
+      "status": "critical",
+      "position": {
+        "x": 14,
+        "y": 12
+      },
+      "vitalSigns": {
+        "heartRate": 42,
+        "bodyTemperature": 35.0,
+        "respirationRate": 7
+      },
+      "timeRemaining": 12
+    }
+  ]
+} 
